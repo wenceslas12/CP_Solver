@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cx": {
+            "type": "number"
+          },
+          "cy": {
+            "type": "number"
+          },
+          "r": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "actualLeftValue": {
+            "type": "number"
+          },
+          "actualRightValue": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pathsTo": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "pathsFrom": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "cx",
+          "cy",
+          "r",
+          "index",
+          "actualLeftValue",
+          "actualRightValue",
+          "pathsTo",
+          "pathsFrom"
+        ]
+      }
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "circleFrom": {
+            "type": "number"
+          },
+          "circleTo": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "nameOfActivity": {
+            "type": "string"
+          },
+          "durations": {
+            "type": "number"
+          },
+          "start": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "earliestEnd": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "latestEnd": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "timeReserve": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "leftValue": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "rightValue": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "circleFrom",
+          "circleTo",
+          "index",
+          "nameOfActivity",
+          "durations",
+          "start",
+          "earliestEnd",
+          "latestEnd",
+          "timeReserve",
+          "leftValue",
+          "rightValue"
+        ]
+      }
+    }
+  },
+  "required": [
+    "nodes",
+    "paths"
+  ]
+}
